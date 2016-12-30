@@ -1,0 +1,585 @@
+
+package com.dj.people.school.page;
+import com.dj.people.school.entity.SchoolInfoEntity;
+import com.dj.people.school.entity.SchoolingChildrenEntity;
+
+import java.math.BigDecimal;
+import java.util.Date;
+import java.util.List;
+import java.util.ArrayList;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+import javax.persistence.SequenceGenerator;
+
+
+/**   
+ * @Title: Entity
+ * @Description: 子女就学
+ * @author onlineGenerator
+ * @date 2015-11-25 16:47:39
+ * @version V1.0   
+ *
+ */
+public class SchoolInfoPage implements java.io.Serializable {
+	/**保存-子女就学*/
+	private List<SchoolingChildrenEntity> schoolingChildrenList = new ArrayList<SchoolingChildrenEntity>();
+	
+	public List<SchoolingChildrenEntity> getSchoolingChildrenList() {
+		return schoolingChildrenList;
+	}
+	public void setSchoolingChildrenList(List<SchoolingChildrenEntity> schoolingChildrenList) {
+		this.schoolingChildrenList = schoolingChildrenList;
+	}
+
+	/**主键*/
+	private java.lang.Integer id;
+	/**创建人名称*/
+	private java.lang.String createName;
+	/**创建人登录名称*/
+	private java.lang.String createBy;
+	/**创建日期*/
+	private java.util.Date createDate;
+	/**更新人名称*/
+	private java.lang.String updateName;
+	/**更新人登录名称*/
+	private java.lang.String updateBy;
+	/**更新日期*/
+	private java.util.Date updateDate;
+	/**姓名*/
+	private java.lang.String name;
+	/**性别*/
+	private java.lang.String sex;
+	/**生日*/
+	private java.util.Date birthdate;
+	/**人口来源*/
+	private java.lang.String peoType;
+	/**出生地*/
+	private java.lang.String birthPlace;
+	/**证件类型*/
+	private java.lang.String idType;
+	/**证件号码*/
+	private java.lang.String idNo;
+	/**曾用名*/
+	private java.lang.String usedName;
+	/**国籍*/
+	private java.lang.String nationality;
+	/**名族*/
+	private java.lang.String nation;
+	/**身高*/
+	private java.lang.Integer height;
+	/**血型*/
+	private java.lang.String bloodType;
+	/**学历*/
+	private java.lang.String degree;
+	/**婚姻状况*/
+	private java.lang.String maritalStatus;
+	/**配偶姓名*/
+	private java.lang.String spouseName;
+	/**座机*/
+	private java.lang.String tel;
+	/**手机*/
+	private java.lang.String phone;
+	/**工作地点*/
+	private java.lang.String workAddress;
+	/**兵役状况*/
+	private java.lang.String isArmy;
+	/**兵役详情*/
+	private java.lang.String armyRemark;
+	/**户籍地区*/
+	private java.lang.String permanentDistrict;
+	/**户籍地址*/
+	private java.lang.String permanentAddress;
+	/**现居住地区*/
+	private java.lang.String currentDistrict;
+	/**现居住地址*/
+	private java.lang.String currentAddress;
+	/**备注*/
+	private java.lang.String remark;
+	
+	/**
+	 *方法: 取得java.lang.Integer
+	 *@return: java.lang.Integer  主键
+	 */
+	public java.lang.Integer getId(){
+		return this.id;
+	}
+
+	/**
+	 *方法: 设置java.lang.Integer
+	 *@param: java.lang.Integer  主键
+	 */
+	public void setId(java.lang.Integer id){
+		this.id = id;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  创建人名称
+	 */
+	public java.lang.String getCreateName(){
+		return this.createName;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  创建人名称
+	 */
+	public void setCreateName(java.lang.String createName){
+		this.createName = createName;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  创建人登录名称
+	 */
+	public java.lang.String getCreateBy(){
+		return this.createBy;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  创建人登录名称
+	 */
+	public void setCreateBy(java.lang.String createBy){
+		this.createBy = createBy;
+	}
+	/**
+	 *方法: 取得java.util.Date
+	 *@return: java.util.Date  创建日期
+	 */
+	public java.util.Date getCreateDate(){
+		return this.createDate;
+	}
+
+	/**
+	 *方法: 设置java.util.Date
+	 *@param: java.util.Date  创建日期
+	 */
+	public void setCreateDate(java.util.Date createDate){
+		this.createDate = createDate;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  更新人名称
+	 */
+	public java.lang.String getUpdateName(){
+		return this.updateName;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  更新人名称
+	 */
+	public void setUpdateName(java.lang.String updateName){
+		this.updateName = updateName;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  更新人登录名称
+	 */
+	public java.lang.String getUpdateBy(){
+		return this.updateBy;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  更新人登录名称
+	 */
+	public void setUpdateBy(java.lang.String updateBy){
+		this.updateBy = updateBy;
+	}
+	/**
+	 *方法: 取得java.util.Date
+	 *@return: java.util.Date  更新日期
+	 */
+	public java.util.Date getUpdateDate(){
+		return this.updateDate;
+	}
+
+	/**
+	 *方法: 设置java.util.Date
+	 *@param: java.util.Date  更新日期
+	 */
+	public void setUpdateDate(java.util.Date updateDate){
+		this.updateDate = updateDate;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  姓名
+	 */
+	public java.lang.String getName(){
+		return this.name;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  姓名
+	 */
+	public void setName(java.lang.String name){
+		this.name = name;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  性别
+	 */
+	public java.lang.String getSex(){
+		return this.sex;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  性别
+	 */
+	public void setSex(java.lang.String sex){
+		this.sex = sex;
+	}
+	/**
+	 *方法: 取得java.util.Date
+	 *@return: java.util.Date  生日
+	 */
+	public java.util.Date getBirthdate(){
+		return this.birthdate;
+	}
+
+	/**
+	 *方法: 设置java.util.Date
+	 *@param: java.util.Date  生日
+	 */
+	public void setBirthdate(java.util.Date birthdate){
+		this.birthdate = birthdate;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  人口来源
+	 */
+	public java.lang.String getPeoType(){
+		return this.peoType;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  人口来源
+	 */
+	public void setPeoType(java.lang.String peoType){
+		this.peoType = peoType;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  出生地
+	 */
+	public java.lang.String getBirthPlace(){
+		return this.birthPlace;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  出生地
+	 */
+	public void setBirthPlace(java.lang.String birthPlace){
+		this.birthPlace = birthPlace;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  证件类型
+	 */
+	public java.lang.String getIdType(){
+		return this.idType;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  证件类型
+	 */
+	public void setIdType(java.lang.String idType){
+		this.idType = idType;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  证件号码
+	 */
+	public java.lang.String getIdNo(){
+		return this.idNo;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  证件号码
+	 */
+	public void setIdNo(java.lang.String idNo){
+		this.idNo = idNo;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  曾用名
+	 */
+	public java.lang.String getUsedName(){
+		return this.usedName;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  曾用名
+	 */
+	public void setUsedName(java.lang.String usedName){
+		this.usedName = usedName;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  国籍
+	 */
+	public java.lang.String getNationality(){
+		return this.nationality;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  国籍
+	 */
+	public void setNationality(java.lang.String nationality){
+		this.nationality = nationality;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  名族
+	 */
+	public java.lang.String getNation(){
+		return this.nation;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  名族
+	 */
+	public void setNation(java.lang.String nation){
+		this.nation = nation;
+	}
+	/**
+	 *方法: 取得java.lang.Integer
+	 *@return: java.lang.Integer  身高
+	 */
+	public java.lang.Integer getHeight(){
+		return this.height;
+	}
+
+	/**
+	 *方法: 设置java.lang.Integer
+	 *@param: java.lang.Integer  身高
+	 */
+	public void setHeight(java.lang.Integer height){
+		this.height = height;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  血型
+	 */
+	public java.lang.String getBloodType(){
+		return this.bloodType;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  血型
+	 */
+	public void setBloodType(java.lang.String bloodType){
+		this.bloodType = bloodType;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  学历
+	 */
+	public java.lang.String getDegree(){
+		return this.degree;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  学历
+	 */
+	public void setDegree(java.lang.String degree){
+		this.degree = degree;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  婚姻状况
+	 */
+	public java.lang.String getMaritalStatus(){
+		return this.maritalStatus;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  婚姻状况
+	 */
+	public void setMaritalStatus(java.lang.String maritalStatus){
+		this.maritalStatus = maritalStatus;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  配偶姓名
+	 */
+	public java.lang.String getSpouseName(){
+		return this.spouseName;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  配偶姓名
+	 */
+	public void setSpouseName(java.lang.String spouseName){
+		this.spouseName = spouseName;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  座机
+	 */
+	public java.lang.String getTel(){
+		return this.tel;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  座机
+	 */
+	public void setTel(java.lang.String tel){
+		this.tel = tel;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  手机
+	 */
+	public java.lang.String getPhone(){
+		return this.phone;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  手机
+	 */
+	public void setPhone(java.lang.String phone){
+		this.phone = phone;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  工作地点
+	 */
+	public java.lang.String getWorkAddress(){
+		return this.workAddress;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  工作地点
+	 */
+	public void setWorkAddress(java.lang.String workAddress){
+		this.workAddress = workAddress;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  兵役状况
+	 */
+	public java.lang.String getIsArmy(){
+		return this.isArmy;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  兵役状况
+	 */
+	public void setIsArmy(java.lang.String isArmy){
+		this.isArmy = isArmy;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  兵役详情
+	 */
+	public java.lang.String getArmyRemark(){
+		return this.armyRemark;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  兵役详情
+	 */
+	public void setArmyRemark(java.lang.String armyRemark){
+		this.armyRemark = armyRemark;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  户籍地区
+	 */
+	public java.lang.String getPermanentDistrict(){
+		return this.permanentDistrict;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  户籍地区
+	 */
+	public void setPermanentDistrict(java.lang.String permanentDistrict){
+		this.permanentDistrict = permanentDistrict;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  户籍地址
+	 */
+	public java.lang.String getPermanentAddress(){
+		return this.permanentAddress;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  户籍地址
+	 */
+	public void setPermanentAddress(java.lang.String permanentAddress){
+		this.permanentAddress = permanentAddress;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  现居住地区
+	 */
+	public java.lang.String getCurrentDistrict(){
+		return this.currentDistrict;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  现居住地区
+	 */
+	public void setCurrentDistrict(java.lang.String currentDistrict){
+		this.currentDistrict = currentDistrict;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  现居住地址
+	 */
+	public java.lang.String getCurrentAddress(){
+		return this.currentAddress;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  现居住地址
+	 */
+	public void setCurrentAddress(java.lang.String currentAddress){
+		this.currentAddress = currentAddress;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  备注
+	 */
+	public java.lang.String getRemark(){
+		return this.remark;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  备注
+	 */
+	public void setRemark(java.lang.String remark){
+		this.remark = remark;
+	}
+}

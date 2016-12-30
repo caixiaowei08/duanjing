@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class
+        name="org.jeecgframework.core.common.controller.BaseController"
+        x="221" y="30">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class
+        name="com.dj.people.localpeoplel01.controller.DjPeopleBaseL01Controller"
+        x="223" y="518">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.jeecgframework.core.common.controller.BaseController"/>
+        <Association
+            destinationClassName="com.dj.people.localpeoplel01.service.DjPeopleBaseL01ServiceI"
+            endpointName="djPeopleBaseL01Service" kind="Simple"/>
+        <Communication destinationClassName="com.dj.people.localpeoplel01.entity.DjPeopleBaseL01Entity"/>
+        <Communication destinationClassName="com.dj.people.localpeoplel01.service.DjPeopleBaseL01ServiceI"/>
+    </Class>
+    <Class
+        name="com.dj.people.localpeoplel01.service.impl.DjPeopleBaseL01ServiceImpl"
+        x="574" y="117">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.dj.people.localpeoplel01.service.DjPeopleBaseL01ServiceI"/>
+    </Class>
+    <Class
+        name="com.dj.people.localpeoplel01.entity.DjPeopleBaseL01Entity"
+        x="55" y="25">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class
+        name="com.dj.people.localpeoplel01.service.DjPeopleBaseL01ServiceI"
+        x="572" y="299">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+</ClassDiagram>

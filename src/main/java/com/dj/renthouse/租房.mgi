@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass
+        name="org.jeecgframework.core.common.service.CommonService"
+        x="246" y="396"/>
+    <CommunicationClass
+        name="org.jeecgframework.core.common.service.impl.CommonServiceImpl"
+        x="419" y="396">
+        <Extension destinationClassName="org.jeecgframework.core.common.service.CommonService"/>
+    </CommunicationClass>
+    <CommunicationClass
+        name="com.dj.renthouse.renthouseinfo.service.DjHouseInfoServiceI"
+        x="418" y="544">
+        <Extension destinationClassName="org.jeecgframework.core.common.service.CommonService"/>
+    </CommunicationClass>
+    <CommunicationClass
+        name="com.dj.renthouse.renthouseinfo.service.impl.DjHouseInfoServiceImpl"
+        x="220" y="546">
+        <Extension destinationClassName="org.jeecgframework.core.common.service.impl.CommonServiceImpl"/>
+        <Extension destinationClassName="com.dj.renthouse.renthouseinfo.service.DjHouseInfoServiceI"/>
+    </CommunicationClass>
+</ClassDiagram>

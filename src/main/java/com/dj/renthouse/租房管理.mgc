@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class
+        name="org.jeecgframework.core.common.controller.BaseController"
+        x="263" y="79">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.dj.renthouse.house.controller.DjHouseController"
+        x="245" y="170">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.jeecgframework.core.common.controller.BaseController"/>
+        <Association
+            destinationClassName="com.dj.renthouse.house.service.DjHouseServiceI"
+            endpointName="djHouseService" kind="Simple"/>
+        <Association
+            destinationClassName="com.dj.renthouse.renthouseinfo.service.DjHouseInfoServiceI"
+            endpointName="djHouseInfoService" kind="Simple"/>
+        <Communication destinationClassName="com.dj.renthouse.house.service.DjHouseServiceI"/>
+        <Communication destinationClassName="com.dj.renthouse.renthouseinfo.entity.DjHouseInfoEntity"/>
+        <Communication destinationClassName="com.dj.renthouse.renthouseinfo.service.DjHouseInfoServiceI"/>
+    </Class>
+    <Class name="com.dj.renthouse.house.service.DjHouseServiceI" x="734" y="486">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class
+        name="com.dj.renthouse.renthouseinfo.controller.DjHouseInfoController"
+        x="273" y="-296">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.jeecgframework.core.common.controller.BaseController"/>
+        <Association
+            destinationClassName="com.dj.renthouse.renthouseinfo.service.DjHouseInfoServiceI"
+            endpointName="djHouseInfoService" kind="Simple"/>
+        <Communication destinationClassName="com.dj.renthouse.renthouseinfo.entity.DjHouseInfoEntity"/>
+        <Communication destinationClassName="com.dj.renthouse.renthouseinfo.service.DjHouseInfoServiceI"/>
+    </Class>
+    <Class
+        name="com.dj.renthouse.renthouseinfo.entity.DjHouseInfoEntity"
+        x="1067" y="337">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class
+        name="com.dj.renthouse.renthouseinfo.service.DjHouseInfoServiceI"
+        x="970" y="-37">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.dj.renthouse.house.service.impl.DjHouseServiceImpl"
+        x="969" y="150">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.dj.renthouse.house.service.DjHouseServiceI"/>
+    </Class>
+    <Class
+        name="com.dj.renthouse.renthouseinfo.service.impl.DjHouseInfoServiceImpl"
+        x="912" y="-290">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.dj.renthouse.renthouseinfo.service.DjHouseInfoServiceI"/>
+    </Class>
+</ClassDiagram>

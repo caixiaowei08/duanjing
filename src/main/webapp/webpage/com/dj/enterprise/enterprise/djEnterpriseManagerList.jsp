@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/context/mytags.jsp"%>
+<t:base type="jquery,easyui,tools,DatePicker"></t:base>
+<div class="easyui-layout" fit="true">
+  <div region="center" style="padding:1px;">
+  <t:datagrid name="djEnterpriseManagerList" checkbox="true" fitColumns="false" title="企事业单位管理" actionUrl="djEnterpriseManagerController.do?datagrid" idField="id" fit="true" queryMode="group">
+   <t:dgCol title="主键"  field="id"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="创建人名称"  field="createName"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="创建人登录名称"  field="createBy"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="创建日期"  field="createDate" formatter="yyyy-MM-dd" hidden="true"  queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="更新人名称"  field="updateName"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="更新人登录名称"  field="updateBy"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="更新日期"  field="updateDate" formatter="yyyy-MM-dd" hidden="true"  queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="单位名称"  field="enterName"   query="true" queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="单位地址"  field="enterAddress"    queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="法人代表"  field="enterLegalPerson"   query="true" queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="法人证件类型"  field="idType"   query="true" queryMode="single" dictionary="id_type" width="120"></t:dgCol>
+   <t:dgCol title="法人证件号"  field="idNo"   query="true" queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="法人电话"  field="enterLegalTel"    queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="常务负责人"  field="enterRoutineName"   query="true" queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="负责人联系电话"  field="enterRoutineTel"    queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="是否合制"  field="enterIsCoProd"   query="true" queryMode="single" dictionary="sf_yn" width="120"></t:dgCol>
+   <t:dgCol title="经营项目"  field="enterOperItems"    queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="员工人数"  field="enterNumberEmployee"    queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="签约时间"  field="enterTime" formatter="yyyy-MM-dd"  query="true" queryMode="group"  width="120"></t:dgCol>
+   <t:dgCol title="签约期限"  field="enterDeadlline"    queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="签约人"  field="enterContract"    queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="是否消防重点单位"  field="enterIsFire"   query="true" queryMode="single" dictionary="sf_yn" width="120"></t:dgCol>
+   <t:dgCol title="备注"  field="enterRemark"    queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="操作" field="opt" width="100"></t:dgCol>
+   <t:dgDelOpt title="删除" url="djEnterpriseManagerController.do?doDel&id={id}" />
+   <t:dgToolBar title="录入" icon="icon-add" url="djEnterpriseManagerController.do?goAdd" funname="add"></t:dgToolBar>
+   <t:dgToolBar title="编辑" icon="icon-edit" url="djEnterpriseManagerController.do?goUpdate" funname="update"></t:dgToolBar>
+   <t:dgToolBar title="批量删除"  icon="icon-remove" url="djEnterpriseManagerController.do?doBatchDel" funname="deleteALLSelect"></t:dgToolBar>
+   <t:dgToolBar title="查看" icon="icon-search" url="djEnterpriseManagerController.do?goUpdate" funname="detail"></t:dgToolBar>
+ <%--   <t:dgToolBar title="导入" icon="icon-put" funname="ImportXls"></t:dgToolBar>
+   <t:dgToolBar title="导出" icon="icon-putout" funname="ExportXls"></t:dgToolBar>
+   <t:dgToolBar title="模板下载" icon="icon-putout" funname="ExportXlsByT"></t:dgToolBar> --%>
+  </t:datagrid>
+  </div>
+ </div>
+ <script src = "webpage/com/dj/enterprise/enterprise/djEnterpriseManagerList.js"></script>		
+ <script type="text/javascript">
+ $(document).ready(function(){
+ 		//给时间控件加上样式
+ 			$("#djEnterpriseManagerListtb").find("input[name='createDate']").attr("class","Wdate").attr("style","height:20px;width:90px;").click(function(){WdatePicker({dateFmt:'yyyy-MM-dd'});});
+ 			$("#djEnterpriseManagerListtb").find("input[name='updateDate']").attr("class","Wdate").attr("style","height:20px;width:90px;").click(function(){WdatePicker({dateFmt:'yyyy-MM-dd'});});
+ 			$("#djEnterpriseManagerListtb").find("input[name='enterTime_begin']").attr("class","Wdate").attr("style","height:20px;width:90px;").click(function(){WdatePicker({dateFmt:'yyyy-MM-dd'});});
+ 			$("#djEnterpriseManagerListtb").find("input[name='enterTime_end']").attr("class","Wdate").attr("style","height:20px;width:90px;").click(function(){WdatePicker({dateFmt:'yyyy-MM-dd'});});
+ });
+ 
+//导入
+function ImportXls() {
+	openuploadwin('Excel导入', 'djEnterpriseManagerController.do?upload', "djEnterpriseManagerList");
+}
+
+//导出
+function ExportXls() {
+	JeecgExcelExport("djEnterpriseManagerController.do?exportXls","djEnterpriseManagerList");
+}
+
+//模板下载
+function ExportXlsByT() {
+	JeecgExcelExport("djEnterpriseManagerController.do?exportXlsByT","djEnterpriseManagerList");
+}
+ </script>
